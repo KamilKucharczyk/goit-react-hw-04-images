@@ -14,7 +14,7 @@ const baseURL = 'https://pixabay.com/api/';
 export const App = () => {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [setError] = useState('');
+  const [error, setError] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [query, setQuery] = useState('');
   const [hasMore, setHasMore] = useState(true);
