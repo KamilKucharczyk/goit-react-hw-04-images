@@ -1,22 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import css from './imageGalleryItem.module.css';
 
 import PropTypes from 'prop-types';
 
-class ImageGalleryItem extends Component {
-  render() {
-    const { image, onClick } = this.props;
-    return (
-      <li
-        className={css.imageGalleryItem}
-        onClick={() => onClick(image.largeImageURL)}
-      >
-        <img src={image.webformatURL} alt={image.tags} />
-      </li>
-    );
-  }
-}
+const ImageGalleryItem = ({ image, onClick }) => {
+  return (
+    <li
+      className={css.imageGalleryItem}
+      onClick={() => onClick(image.largeImageURL)}
+    >
+      <img src={image.webformatURL} alt={image.tags} />
+    </li>
+  );
+};
 
 export default ImageGalleryItem;
 
